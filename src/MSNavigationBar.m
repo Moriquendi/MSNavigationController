@@ -76,14 +76,8 @@ NSString *kAnimFadeOut = @"AnimFadeOut";
         [self.layer addSublayer:self.shadowLayer];
         
         // Cache colors
-        self.gradientStartColor = [UIColor colorWithRed:225./255.
-                                                  green:225./255.
-                                                   blue:225./255.
-                                                  alpha:1.0];
-        self.gradientEndColor = [UIColor colorWithRed:200./255.
-                                                green:200./255.
-                                                 blue:200./255.
-                                                alpha:1.0];
+        self.gradientEndColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+        self.gradientStartColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
     }
     return self;
 }

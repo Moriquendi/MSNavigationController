@@ -39,13 +39,13 @@
 {
     if (self = [super initWithNavigationBarClass:[MSNavigationBar class] toolbarClass:nil]) {
 
-        if ([rootViewController.view isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *rootScrollView = (UIScrollView *)rootViewController.view;
-            rootScrollView.contentSize = CGSizeMake(200, 600);
-            [rootScrollView addObserver:self
-                             forKeyPath:@"contentOffset"
-                                options:NSKeyValueObservingOptionOld
-                                context:nil];
+        if ([rootViewController.view.subviews[0] isKindOfClass:[UIScrollView class]]) {
+//            UIScrollView *rootScrollView = (UIScrollView *)rootViewController.view.subviews[0];
+//            rootScrollView.contentSize = CGSizeMake(200, 600);
+//            [rootScrollView addObserver:self
+//                             forKeyPath:@"contentOffset"
+//                                options:NSKeyValueObservingOptionOld
+//                                context:nil];
         }
         
         [self setViewControllers:@[rootViewController]];
